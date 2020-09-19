@@ -1,0 +1,99 @@
+body{
+  background: none!important;
+}
+
+.app-main{
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-section{
+  width: 25vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(66, 99, 99, 0.4);
+  position: absolute;
+}
+
+.right-section{
+  width: 75vw;
+  height: 100vw;
+  left: 25vw;
+  top: 0;
+  position: absolute;
+  
+}
+
+.content{
+  width: 35vh;
+  height: 35vh;
+  box-shadow: 2px 2px 12px 4px #15171c;
+  top: 63vh;
+  left: 53.5vw;
+  position: absolute;
+}
+
+.song-details{
+  font-weight: lighter;
+  top: 75vh;
+  left: 2.5vw;
+  position: absolute;
+}
+
+.song-display{
+  background: url(../assets/img.jpeg) center center no-repeat;
+  width: 35vh;
+  height: 35vh;
+  background-size: cover;
+}
+
+.song-name{
+  font-size: 42px;
+  font-weight: lighter;
+}
+
+.artist{
+  font-size: 28px;
+}
+
+.dot{
+  position: absolute;
+  top: 13.5vh;
+  left: 12vh;
+  border-radius: 100%;
+  z-index: 2;
+  width: 1.4vh;
+  height: 1.4vh;
+  background: #e91e63;
+}
+
+.musicPlayerTimeline{
+  top: 14vh;
+  position: absolute;
+  width: 42vw;
+  height: 0.42vh;
+  background: #15171c;
+}
+
+.startTime{
+  position: absolute;
+  top: 18vh;
+}
+
+.endTime{
+  position: absolute;
+  top: 18vh;
+  left: 40vw;
+}
+
+.camera{
+  position: absolute;
+  right: 1.2vw;
+}
+
+#canvas{
+  display: none;
+  width: 0vw!important;
+  height: 0vw!important;
+}

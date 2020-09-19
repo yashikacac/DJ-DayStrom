@@ -1,22 +1,37 @@
+import json
+
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
+from django.http import HttpResponse, JsonResponse
 
 # Create your views here.
 def register(request):
 	if request.method == 'POST':
-		user_info = json.loads(request.body)
+		try:
+			user_info = json.loads(request.body)
 
-		username = user_info['username']
-		password = user_info['password']
-		email = user_info['email']
-		firstName = user_info['first_name']
-		lastName = user_info['last_name']
+			username = user_info['username']
+			password = user_info['password']
+			email = user_info['email']
+			firstName = user_info['first_name']
+			lastName = user_info['last_name']
 
-		user = Users.objects.create(first_name=firstName, last_name=lastName,
-			email=email, password=password, username=username)
+			user = User.objects.create(first_name=firstName, last_name=lastName, email=email, password=password, username=username)
+		except Exception as e:
+			data = {
+				"message": str(e)
+			}
+		else:
+			data = {
+				"message": "true"
+			}
+	else:
+		data = {
+			"message": "false"
+		}
 
-		return HttpResponse("success")
+	return JsonResponse(data)
 
 def Login(request):
 	if request.method == 'POST':
@@ -28,5 +43,3 @@ def Login(request):
 			return HttpResponse("success")
 		else:
 			return HttpResponse("Fail")
-
-

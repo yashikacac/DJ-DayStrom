@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    overflow:hidden;
+    background: url(../assets/background.jpeg) center center no-repeat;
+    background-size: cover;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+.register-container{
+    width: 40vw;
+    font-family: 'Josefin Sans',sans-serif;
+    height: 80vh!important;
+    left: 30vw;
+    top: 10vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.54)!important;
+}
+#signup{
+    position: relative;
+    padding: 4vh 0;
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: x-large;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+form{
+    padding-top: 6.5vh;
+    font-size: x-large;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+.register-bttn{
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5vh;
+    outline: none;
+    padding: 15px 32px;
+    font-size: 18px!important;
+    text-align: center;
+    color: #fff;
+    font-family: "Josefin Sans";
+    background: #15171c;
+}

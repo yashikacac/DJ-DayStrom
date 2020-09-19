@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    overflow:hidden;
+    background: url(../assets/background.jpeg) center center no-repeat;
+    background-size: cover;
+    font-family: 'Josefin Sans',sans-serif;
+
+}
+.main{
+    width: 100vw;
+    font-family: 'Josefin Sans',sans-serif;
+    height: 100vh;
+}
+.login-container{
+    width: 40vw;
+    font-family: 'Josefin Sans',sans-serif;
+    height: 55vh!important;
+    left: 30vw;
+    top: 20vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.54)!important;
+}
+#login{
+    position: relative;
+    padding: 4vh 0;
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: x-large;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+form{
+    padding-top: 10vh;
+    padding-left: 10vw;
+    font-size: x-large;
+    font-family: 'Josefin Sans',sans-serif;
+}
+.input{
+    padding-top: 1vh;
+    font-family: 'Josefin Sans',sans-serif;
+    outline: none;
+    background: transparent;
+    border: none;
+    width: 20vw!important;
+    font-size: 20px!important;
+    border-bottom: 0.2vh solid #15171c;   
+}
+
+.login-bttn{
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5vh;
+    outline: none;
+    padding: 15px 32px;
+    font-size: 18px!important;
+    text-align: center;
+    color: #fff;
+    font-family: "Josefin Sans";
+    background: #15171c;
+}

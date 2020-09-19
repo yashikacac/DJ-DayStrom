@@ -61,7 +61,7 @@ def getMood(request):
 				emotion = emotions[i]
 		result = {
 			"message": {
-				"emotionsDetected": emotion
+				"emotionDetected": emotion
 			}
 		}
 		return JsonResponse(result)
