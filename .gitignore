@@ -1,0 +1,4 @@
+.DS_Store
+myvenv/
+__init__.py
+__pycache__/
