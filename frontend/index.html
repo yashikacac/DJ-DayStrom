@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    body{
+        margin: 0;
+        overflow:hidden;
+        font-family: 'Josefin Sans',sans-serif;
+        /*background-color: rgba(121, 116, 116, 0.3);*/
+    }
+
+    .app-main{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .left-section{
+        width: 25vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background-color: rgba(66, 99, 99, 0.4);
+        position: absolute;
+    }
+
+    .right-section{
+        width: 75vw;
+        height: 100vw;
+        left: 25vw;
+        top: 0;
+        position: absolute;
+        
+    }
+
+    .content{
+        width: 35vh;
+        height: 35vh;
+        box-shadow: 2px 2px 12px 4px #15171c;
+        top: 63vh;
+        left: 53.5vw;
+        position: absolute;
+    }
+
+    .song-details{
+        font-weight: lighter;
+        top: 75vh;
+        left: 2.5vw;
+        position: absolute;
+    }
+
+    .song-display{
+        background: url("img.jpeg") center center no-repeat;
+        width: 35vh;
+        height: 35vh;
+        background-size: cover;
+    }
+
+    .song-name{
+        font-size: 42px;
+        font-weight: lighter;
+    }
+
+    .artist{
+        font-size: 28px;
+    }
+
+    .dot{
+        position: absolute;
+        top: 13.5vh;
+        left: 12vh;
+        border-radius: 100%;
+        z-index: 2;
+        width: 1.4vh;
+        height: 1.4vh;
+        background: #e91e63;
+    }
+
+    .musicPlayerTimeline{
+        top: 14vh;
+        position: absolute;
+        width: 42vw;
+        height: 0.42vh;
+        background: #15171c;
+    }
+
+    .startTime{
+        position: absolute;
+        top: 18vh;
+    }
+
+    .endTime{
+        position: absolute;
+        top: 18vh;
+        left: 40vw;
+    }
+
+    .camera{
+        position: absolute;
+        right: 1.2vw;
+    }
+
+    #canvas{
+        display: none;
+        width: 0vw!important;
+        height: 0vw!important;
+    }
+
+</style>
+<script type="text/javascript" src="main.js"></script>
+<body>
+    <div class="app-main">
+        <div class="left-section"></div>
+        <div class="right-section">
+            <div class="camera">
+                <video id="video">Video stream not available.</video><br>
+                <div class="mood">
+                    <center>Happy</center>
+                </div>
+                <!-- <button id="startbutton">Take photo</button>  -->
+            </div>
+            <canvas id="canvas"></canvas>
+            <div class="content">
+                <div class="song-display"></div>
+            </div>
+            <div class="song-details">
+                <span class="song-name">
+                    Something Just Like This
+                </span>
+                <br>
+                <span class="artist">
+                    Coldplay and The Chainsmokers
+                </span>
+                <div class="music-player">
+                    <div class="dot"></div>
+                    <div class="musicPlayerTimeline"></div>
+                    <div class="startTime">
+                        2:12
+                    </div>
+                    <div class="endTime">
+                        4:04
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

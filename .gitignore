@@ -2,3 +2,6 @@
 myvenv/
 __init__.py
 __pycache__/
+googleCloudKey.json
+**/migrations/*
+db.sqlite3

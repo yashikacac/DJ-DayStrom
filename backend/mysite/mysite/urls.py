@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from users import views as user_form
+from app import views as app_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',user_form.register,name = 'register'),
     path('login/',user_form.Login,name = 'login'),
+    path('process/',app_view.processImage,name = 'process_image'),
+    path('mood/', app_view.getMood, name='get_mood')
 ]
