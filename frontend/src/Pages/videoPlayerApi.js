@@ -11,41 +11,47 @@
 
   
     function startup() {
-      video = document.getElementById('video');
-      canvas = document.getElementById('canvas');
-  
-      navigator.mediaDevices.getUserMedia({video: true, audio: false})
-      .then(function(stream) {
-        video.srcObject = stream;
-        video.play();
-      })
-      .catch(function(err) {
-        console.log("An error occurred: " + err);
-      });
-  
-      video.addEventListener('canplay', function(ev){
-        if (!streaming) {
-          height = video.videoHeight / (video.videoWidth/width);
-  
-          if (isNaN(height)) {
-            height = width / (4/3);
+      if(video != null && canvas != null){
+        video = document.getElementById('video');
+        canvas = document.getElementById('canvas');
+    
+        navigator.mediaDevices.getUserMedia({video: true, audio: false})
+        .then(function(stream) {
+          video.srcObject = stream;
+          video.play();
+        })
+        .catch(function(err) {
+          console.log("An error occurred: " + err);
+        });
+      }
+
+      if(video != null){
+        video.addEventListener('canplay', function(ev){
+          if (!streaming) {
+            height = video.videoHeight / (video.videoWidth/width);
+    
+            if (isNaN(height)) {
+              height = width / (4/3);
+            }
+          
+            video.setAttribute('width', width);
+            video.setAttribute('height', height);
+            canvas.setAttribute('width', width);
+            canvas.setAttribute('height', height);
+            streaming = true;
           }
-        
-          video.setAttribute('width', width);
-          video.setAttribute('height', height);
-          canvas.setAttribute('width', width);
-          canvas.setAttribute('height', height);
-          streaming = true;
-        }
-      }, false);
+        }, false);
+      }
    
       clearphoto();
     }
   
     function clearphoto() {
-      var context = canvas.getContext('2d');
-      context.fillStyle = "#AAA";
-      context.fillRect(0, 0, canvas.width, canvas.height);
+      if(canvas != null){
+        var context = canvas.getContext('2d');
+        context.fillStyle = "#AAA";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+      }
     }
   
     function sendDataToApi(imageData){

@@ -35,11 +35,26 @@ def register(request):
 
 def Login(request):
 	if request.method == 'POST':
-		login_info = json.loads(request.body)
-		username = login_info['username']
-		password = login_info['password']
-		user = authenticate(username=username, password=password)
-		if user is not None:
-			return HttpResponse("success")
+		try:
+			login_info = json.loads(request.body)
+			username = login_info['username']
+			password = login_info['password']
+			user = authenticate(username=username, password=password)
+		except Exception as e:
+			data = {
+				"message": str(e)
+			}
 		else:
-			return HttpResponse("Fail")
+			if user is not None:
+				data = {
+					"message": "true"
+				}
+			else:
+				data = {
+					"message": "false"
+				}
+	else:
+		data = {
+			"message": "false"
+		}
+	return JsonResponse(data)
