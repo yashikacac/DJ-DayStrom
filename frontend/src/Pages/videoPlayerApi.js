@@ -11,7 +11,6 @@
 
   
     function startup() {
-      if(video != null && canvas != null){
         video = document.getElementById('video');
         canvas = document.getElementById('canvas');
     
@@ -23,9 +22,8 @@
         .catch(function(err) {
           console.log("An error occurred: " + err);
         });
-      }
 
-      if(video != null){
+
         video.addEventListener('canplay', function(ev){
           if (!streaming) {
             height = video.videoHeight / (video.videoWidth/width);
@@ -41,17 +39,14 @@
             streaming = true;
           }
         }, false);
-      }
    
       clearphoto();
     }
   
     function clearphoto() {
-      if(canvas != null){
         var context = canvas.getContext('2d');
         context.fillStyle = "#AAA";
         context.fillRect(0, 0, canvas.width, canvas.height);
-      }
     }
   
     function sendDataToApi(imageData){

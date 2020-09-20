@@ -4,7 +4,6 @@ body{
     background: url(../assets/background.jpeg) center center no-repeat!important;
     background-size: cover!important;
     font-family: 'Josefin Sans',sans-serif;
-
 }
 .main{
     width: 100vw;
@@ -58,4 +57,14 @@ form{
     color: #fff;
     font-family: "Josefin Sans";
     background: #15171c;
+}
+
+.signUp a, .signUp a:visited, .signUp a:active{
+    font-family: "Josefin Sans";
+    color: #fff!important;
+    text-decoration: none;
+    position: absolute;
+    top: 3vh;
+    cursor: pointer;
+    left: 90vw;
 }

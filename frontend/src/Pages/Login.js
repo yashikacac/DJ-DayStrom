@@ -49,7 +49,9 @@ class Login extends React.Component{
     render(){
         return(
             <div className="main">
-                <div className="signUp">Register here</div>
+                <div className="signUp">
+                    <a href="/signup">Register here</a>
+                </div>
                 <div className="login-container">
                     <div className="form">
                         <center id="login">Log &middot; In</center>
